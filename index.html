@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Pathfinding Visualizer</title>
+</head>
+
+<body>
+    <nav class="navigation-bar-container">
+        <div class="project-name-container">
+            <span class="project-name">Pathfinding Visualizer</span>
+        </div>
+        <div class="menu-options-container">
+            <div class="single-option-container">
+                <span class="single-option algos">Algorithms</span>
+                <div class="dropdown-algorithm hide">
+                    <span class="algorithm bfs">Breadth-first Search(BFS)</span>
+                    <span class="algorithm dfs">Depth-first Search(DFS)</span>
+                    <!-- <span class="algorithm a-star">A*</span> -->
+                </div>
+            </div>
+            <div class="single-option-container reset-board">
+                <span class="single-option">Reset Board</span>
+            </div>
+            <div class="visualizer-button-container">
+                <button class="visualizer-button">Choose Algorithm</button>
+            </div>
+            <div class="single-option-container">
+                <span class="single-option mazes">Mazes</span>
+                <div class="dropdown-maze hide">
+                    <span class="maze maze-one">Maze 1</span>
+                    <span class="maze maze-two">Maze 2</span>
+                </div>
+            </div>
+            <div class="single-option-container">
+                <span class="single-option speeds">Speed: Fast</span>
+                <div class="dropdown-speed hide">
+                    <span class="speed fast">Fast</span>
+                    <span class="speed average">Average</span>
+                    <span class="speed slow">Slow</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="legend-container">
+            <div class="single-legend-container">
+                <div class="start-target-node">
+                    <img src="./icons/start-node.svg" class="start-node-icon" />
+                </div>
+                <span class="legend-text">Start Node</span>
+            </div>
+            <div class="single-legend-container">
+                <div class="start-target-node">
+                    <img src="./icons/end-node.svg" class="end-node-icon" />
+                </div>
+                <span class="legend-text">Target Node</span>
+            </div>
+            <div class="single-legend-container">
+                <div class="unvisited"></div>
+                <span class="legend-text">Unvisited Node</span>
+            </div>
+            <div class="single-legend-container">
+                <div class="visited"></div>
+                <span class="legend-text">Visited Node</span>
+            </div>
+            <div class="single-legend-container">
+                <div class="short"></div>
+                <span class="legend-text">Shortest Path Node</span>
+            </div>
+            <div class="single-legend-container">
+                <div class="wall"></div>
+                <span class="legend-text">Wall Node</span>
+            </div>
+        </div>
+    </section>
+    <main>
+        <table class="table-grid">
+        </table>
+    </main>
+
+    <script type="module" src="./board.js"></script>
+</body>
+
+</html>
