@@ -15,12 +15,6 @@ export default function styleChanges(newBoard) {
     algosDropdown.classList.add("hide");
   });
 
-  // document.querySelector(".a-star").addEventListener("click", () => {
-  //   document.querySelector(".visualizer-button").innerHTML = "Visualize A*!";
-  //   algosDropdown.classList.remove("show");
-  //   algosDropdown.classList.add("hide");
-  // });
-
   document.querySelector(".algos").addEventListener("click", () => {
     if (algosDropdown.classList.contains("hide")) {
       algosDropdown.classList.add("show");
@@ -60,11 +54,6 @@ export default function styleChanges(newBoard) {
       newBoard.algorithmDFS();
     }
   });
-  // document.querySelector(".visualizer-button").addEventListener("click", () => {
-  //   if (document.querySelector(".visualizer-button").innerText === "Visualize A*!") {
-  //     newBoard.algorithmAStar();
-  //   }
-  // });
   document.querySelector(".fast").addEventListener("click", () => {
     document.querySelector(".speeds").innerText = "Speed: Fast";
     speedDropdown.classList.add("hide");

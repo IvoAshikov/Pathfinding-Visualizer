@@ -362,7 +362,7 @@ class Board {
 
   changeSpeed() {
     if (document.querySelector(".speeds").innerHTML === "Speed: Average") {
-      algoSpeed = 30;
+      algoSpeed = 50;
     } else if (document.querySelector(".speeds").innerText === "Speed: Slow") {
       algoSpeed = 200;
     } else if (document.querySelector(".speeds").innerText === "Speed: Fast") {
@@ -378,16 +378,16 @@ newBoard.addEventListeners();
 let algoSpeed = 5;
 
 document.addEventListener("mousedown", (e) => {
-  if (e.path[0].classList.length > 0 && e.path[0].classList[0] === NodeType.start) {
+  if (e.target.classList.length > 0 && e.target.classList[0] === NodeType.start) {
     isLMBDownStart = true;
-    let id = e.path[0].id;
+    let id = e.target.id;
     id = id.split("-");
     let row = id[0];
     let col = id[1];
     newBoard.grid[row][col].removeStart();
-  } else if (e.path[0].classList.length > 0 && e.path[0].classList[0] === NodeType.end) {
+  } else if (e.target.classList.length > 0 && e.target.classList[0] === NodeType.end) {
     isLMBDownEnd = true;
-    let id = e.path[0].id;
+    let id = e.target.id;
     id = id.split("-");
     let row = id[0];
     let col = id[1];
@@ -398,8 +398,8 @@ document.addEventListener("mousedown", (e) => {
 document.addEventListener("mouseup", (e) => {
   if (isLMBDownStart) {
     isLMBDownStart = false;
-    if (e.path[0].classList.length > 0 && e.path[0].classList[0] === NodeType.unvisited) {
-      let id = e.path[0].id;
+    if (e.target.classList.length > 0 && e.target.classList[0] === NodeType.unvisited) {
+      let id = e.target.id;
       id = id.split("-");
       let row = id[0];
       let col = id[1];
@@ -408,8 +408,8 @@ document.addEventListener("mouseup", (e) => {
   }
   if (isLMBDownEnd) {
     isLMBDownEnd = false;
-    if (e.path[0].classList.length > 0 && e.path[0].classList[0] === NodeType.unvisited) {
-      let id = e.path[0].id;
+    if (e.target.classList.length > 0 && e.target.classList[0] === NodeType.unvisited) {
+      let id = e.target.id;
       id = id.split("-");
       let row = id[0];
       let col = id[1];
